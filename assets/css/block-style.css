@@ -166,8 +166,12 @@ div.wp-block-cover:first-of-type>div.wp-block-cover__inner-container>div.wp-bloc
 }
 
 
-/* Adding a mergin unter the slogan */
+/* Adding a margin between th eslogan end the buttons*/
 
 .slogan {
-    margin-bottom: ;
+    margin-bottom: 0!important;
+}
+
+.wp-block-buttons {
+    margin-top: 45px;
 }
