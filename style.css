@@ -12,5 +12,235 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 * {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.5s ease;
 }
+
+/****** ROOTS ******/
+
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --color-black-alpha: rgba(0, 0, 0, 0.6);
+    --color-white-alpha: rgba(255, 255, 255, 0.6);
+
+    --color-light-gray: #CFCFCF;
+    --color-gray: #909090;
+    --color-red: #FA3B51;
+    --color-green: #49E390;
+    --color-background-black: #171717;
+    --color-background-gray: #262b2c;
+
+    --text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+body {
+    color: var(--color-white);
+    background-color: var(--color-background-black);
+}
+
+header, footer {
+    background-color: var(--color-background-gray);
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+
+
+/****** HEADER ******/
+
+header {
+  border-bottom: 2px solid #FA3B51;
+  display: flex;
+  align-items: center;
+  padding: 36px 50px 36px 38px;
+  height: 150px;
+}
+
+header .web-title a {
+    color: var(--color-white) !important;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+header .web-title a:hover {
+    color: var(--color-white-alpha) !important;
+}
+
+header .web-title a:after {
+    display: block;
+    position: relative;
+    content: '';
+    width: 2px;
+    height: 46px;
+    margin: 0 38px;
+    background-color: #CFCFCF;
+}
+
+header .web-title {
+    width: max-content;
+    white-space: nowrap;
+}
+
+
+header nav {
+    width:  100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 38px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 24px;
+    margin-top: 15px;
+}
+
+header nav ul li a {
+    color: var(--color-white) !important;
+    text-decoration: none;
+    margin-top: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header ul li a:hover {
+    color: var(--color-white-alpha) !important;
+}
+
+header nav ul li.current-menu-item a {
+    font-weight: 700;
+}
+
+header nav ul li.current-menu-item a:after {
+    display: block;
+    position: relative;
+    content: '';
+    height: 3px;
+    width: 26px;
+    margin: 7px 0 0 0;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+}
+
+.button {
+    width: max-content;
+    white-space: nowrap;
+    color: var(--color-white) !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    border: 2px solid var(--color-white) !important;
+    padding: 14px 40px;
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+}
+
+a.button:hover {
+    background-color: var(--color-gray) !important;
+    opacity: 1;
+}
+
+
+
+/****** FOOTER ******/
+
+footer {
+  border-top: 2px solid #FA3B51;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #262b2c;
+}
+
+footer div h4 {
+    margin-bottom: 20px;
+}
+
+footer .footer-nav nav ul li {
+    margin-bottom: 5px;
+}
+
+footer .footer-nav nav ul li a {
+    color: var(--color-light-gray) !important;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+footer .footer-nav nav ul li a:after {
+    margin-left: 7px;
+    content: '\2192';
+}
+
+footer .social-media nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+footer .social-media nav ul li a {
+    background-color: var(--color-red) !important;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-media nav ul li a:hover {
+  text-shadow: var(--text-shadow) !important;
+  opacity: 1;
+}
+
+footer .social-media nav ul li i {
+    color: var(--color-white) !important;
+    font-size: 40px;
+}
+
+footer .address {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .address a.contact, footer .address address {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-light-gray) !important;
+    text-decoration: none;
+}
+
+footer .address a.contact:hover {
+    color: var(--color-gray) !important;
+}
+
+
+/****** MAIN ******/
+
+main {
+    overflow-x: hidden !important;
+}
+
+
+
+
+
