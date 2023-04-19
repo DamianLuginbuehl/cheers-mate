@@ -13,7 +13,7 @@ h1.wp-block-heading:not(:first-of-type) {
 }
 
 @media (min-width: 768px) {
-    h1.wp-block-heading {
+    h1 {
         font-size: 100px !important;
         line-height: 100px !important;
     }

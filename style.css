@@ -35,6 +35,7 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
     --text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     --box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    --big-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4)
 }
 
 
@@ -56,7 +57,7 @@ nav ul {
 /****** HEADER ******/
 
 header {
-  border-bottom: 2px solid var(--color-red);
+  border-bottom: 3px solid var(--color-red);
   display: flex;
   align-items: center;
   padding: 36px 50px 36px 38px;
@@ -162,7 +163,7 @@ a.button:hover {
 /****** FOOTER ******/
 
 footer {
-  border-top: 2px solid var(--color-red);
+  border-top: 3px solid var(--color-red);
 
   display: flex;
   justify-content: space-between;
@@ -214,7 +215,7 @@ footer .social-media nav ul li a:hover {
 }
 
 footer .social-media nav ul li i {
-    color: var(--color-white) !important;
+    color: var(--color-white);
     font-size: 40px;
 }
 
@@ -240,6 +241,86 @@ footer .address a.contact:hover {
 main {
     overflow-x: hidden !important;
 }
+
+
+
+/****** BLOG ******/
+
+section#latest-post, section#latest-post-image, section#latest-post-image-blur {
+    height: calc(80vh - 150px) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#latest-post-image, section#latest-post-image-blur {
+    position: absolute;
+    width: 100%;
+    z-index: -3;
+    left: 0;
+    top: 150px;
+}
+
+section#latest-post-image-blur {
+    z-index: -2 !important;
+}
+
+section#latest-post div.post-container {
+    width: 1200px;
+    height: 625px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+section#latest-post div.post-image {
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--big-box-shadow);
+}
+
+section#latest-post div.post-info {
+    margin-top: 100px;
+    width: 200%;
+    margin-left: 475px;
+}
+
+section#latest-post div.post-text {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+
+
+.red-button {
+    width: max-content;
+    white-space: nowrap;
+    color: var(--color-white) !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+    background-color: var(--color-red);
+    padding: 20px 65px;
+    margin: 12px !important;
+    margin-right: 50px !important;
+}
+
+.red-button:hover {
+    text-shadow: var(--text-shadow) !important;
+    opacity: 1 !important;
+}
+
+
+
 
 
 
