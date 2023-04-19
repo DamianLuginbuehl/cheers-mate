@@ -68,7 +68,7 @@ div.wp-block-cover__inner-container figure img {
 }
 
 
-/* Applying a padding to all icons, except the logo in th efirst cover */
+/* Applying a padding to all icons, except the logo in the first cover */
 
 div.wp-block-cover:not(:first-of-type) div.wp-block-cover__inner-container figure img {
     border: solid 2px var(--color-red) !important;
@@ -76,10 +76,9 @@ div.wp-block-cover:not(:first-of-type) div.wp-block-cover__inner-container figur
 }
 
 
-/* Setting a red background to the last block on the page */
+/* Setting a the width and height of red elements */
 
 main>div.wp-block-group:last-of-type {
-    background-color: var(--color-red);
     width: 100vw;
     height: 100vh;
 }
@@ -94,7 +93,7 @@ div.wp-block-cover:not(:first-of-type) div.wp-block-cover__inner-container {
 }
 
 
-
+/* Making all block groups in the main a flexbox (form on "Home" and "Jetzt loslegen") */
 
 main>div.wp-block-group {
     display: flex;
@@ -104,11 +103,12 @@ main>div.wp-block-group {
 }
 
 
-/* Limiting the width an dsetting a flexbox to the group with a red BG */
+/* Limiting the width and setting a flexbox to the group with a red BG */
 
 main>div.wp-block-group>div.wp-block-group__inner-container {
     width: 1200px !important;
     display: flex !important;
+    flex-direction: column;
     height: max-content;
 }
 
@@ -166,7 +166,7 @@ div.wp-block-cover:first-of-type>div.wp-block-cover__inner-container>div.wp-bloc
 }
 
 
-/* Adding a margin between th eslogan end the buttons*/
+/* Adding a margin between the slogan end the buttons*/
 
 .slogan {
     margin-bottom: 0!important;
@@ -175,3 +175,156 @@ div.wp-block-cover:first-of-type>div.wp-block-cover__inner-container>div.wp-bloc
 .wp-block-buttons {
     margin-top: 45px;
 }
+
+
+
+
+/****** JETZT LOSLEGEN ******/
+
+/* Defining grid for cards */
+
+main > div.grid4-4 > div.wp-block-group__inner-container {
+    display: grid !important;
+  grid-auto-rows: max-content;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 50px 50px;
+  grid-template-areas:
+    ". ."
+    ". .";
+}
+
+
+/* Applying a margin to the grid */
+
+main > div.grid4-4 {
+    margin: 50px 0;
+}
+
+
+/* adding a paddings and margins to the cards in the grid */
+
+main > div.grid4-4 > div.wp-block-group__inner-container > div.wp-block-group {
+    padding: 50px;
+}
+
+main > div.grid4-4 > div.wp-block-group__inner-container > div.wp-block-group > div.wp-block-group__inner-container > h2 {
+    margin-bottom: 92px;
+}
+main > div.grid4-4 > div.wp-block-group__inner-container > div.wp-block-group > div.wp-block-group__inner-container > p {
+    margin-bottom: 80px;
+}
+
+
+/* defining position of H1 */
+
+main > h1 {
+    margin-top: 220px;
+    margin-bottom: 90px;
+    padding-left: calc((100vw - 1200px) / 2);
+}
+
+
+
+
+/****** FOMRS ******/
+
+/* Newsletter form on first page */
+
+/* Adding a margin to the top off the form */
+
+.wpcf7-form {
+    margin: 62px 0 !important;
+}
+
+
+/* Aligning the label */
+
+form > p > label.nl-label {
+    padding-left: 42px;
+    font-size: 25px;
+    line-height: 30px;
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+
+/* Making the form contents a flexbox */
+
+div.nl-form > p {
+    display: flex !important;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* setting the style size of th e-mail field */
+
+div.nl-form > p span input#nl-email {
+    width: calc(1200px - 60px - 350px);
+    height: 90px;
+    padding-left: 42px;
+    border: none;
+    outline: none;
+    border: 2px solid var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    border-radius: 100px;
+    box-shadow: var(--box-shadow);
+}
+
+div.nl-form > p span input#nl-email:focus {
+    border-color: var(--color-gray);
+}
+
+div.nl-form > p span input#nl-email::placeholder {
+    color: var(--color-gray);
+}
+
+
+/* Input Validation style */
+
+div.nl-form > p span input#nl-email.wpcf7-not-valid {
+    color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+div.nl-form > p span input#nl-email.wpcf7-not-valid::placeholder {
+    color: var(--color-red);
+}
+
+div.nl-form > p span .wpcf7-not-valid-tip, .wpcf7-response-output {
+    display: none;
+}
+
+
+
+/* Setting the style and size of the submit button */
+
+div.nl-form > p input#nl-submit {
+    width: 350px !important;
+    height: 90px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid var(--color-white);
+    border-radius: 100px;
+    color: var(--color-white);
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+div.nl-form > p input#nl-submit:hover {
+    text-shadow: var(--text-shadow);
+}
+
+div.nl-form > p span.wpcf7-spinner {
+    display: none;
+}
+
