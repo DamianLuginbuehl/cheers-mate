@@ -80,14 +80,18 @@
             <?php
 
             $postCount = $wp_query->found_posts;
+            $postCount -= 1;
             $postCount /= 6;
-            $postCount = ceil($postCount);
+            $pagesNeeded = ceil($postCount);
 
-            if ($postCount <= 1) {
+            if ($pagesNeeded <= 1) {
                 $generatePagination = FALSE;
             } else {
                 $generatePagination = true;
             }
+
+            // $pagesNeeded = 2;
+            // $generatePagination = TRUE;
 
 
 
@@ -99,9 +103,9 @@
             </h1>
             <div class="controls">
                 <div class="category-list">
-                    <ul class="categories">
-                        <!-- Insert catergory list -->
-                    </ul>
+                        <ul class="post-categories category-list-all">
+                            <?php wp_list_categories('title_li='); ?>
+                        </ul>
 
                 </div>
                 <div class="pagination">
@@ -109,7 +113,7 @@
 
                     if ($generatePagination == TRUE) {
 
-                        for ($pages = 1; $pages <= $postCount; $pages++) {
+                        for ($pages = 1; $pages <= $pagesNeeded; $pages++) {
                             echo "<button class=\"pagination-button page-$pages\" onclick=\"changePage('$pages')\">$pages</button>";
                         }
                     }
@@ -123,7 +127,7 @@
                 <?php
 
                 $postPage = 1;
-                $postOnPage = 1;
+                $postOnPage = 0;
 
                 if (have_posts()) {
                     while (have_posts()) {
@@ -169,13 +173,26 @@
                     }
                 } ?>
             </div>
-            <div class="pagination">
-                <!-- Insert pagination -->
+            <div class="pagination-end">
+                <div class="pagination">
+                    <?php
+
+                    if ($generatePagination == TRUE) {
+
+                        for ($pages = 1; $pages <= $pagesNeeded; $pages++) {
+                            echo "<button class=\"pagination-button page-$pages\" onclick=\"changePage('$pages')\">$pages</button>";
+                        }
+                    }
+
+                    ?>
+
+                </div>
             </div>
         </section>
     </section>
     <script>
         loadPagination()
+        loadCategories()
     </script>
 
 

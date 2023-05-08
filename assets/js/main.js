@@ -3,6 +3,10 @@ let loadPagination = function() {
     $(".pagination-button.page-1").addClass("active");
 }
 
+let loadCategories = function() {
+    $(".category-list-all > li > a").addClass("category-transparent")
+}
+
 let changePage = function(page) {
     $(".postcard").removeClass("visible");
     $(".pagination-button").removeClass("active");
