@@ -1,5 +1,5 @@
 <?php get_header();
- set_time_limit(60) ?>
+?>
 
 <main class="blog-page">
 

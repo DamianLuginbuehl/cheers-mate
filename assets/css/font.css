@@ -2,10 +2,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-h1.wp-block-heading {
+h1 {
     font-size: 40px !important;
     line-height: 49px;
     font-weight: 700;
+}
+
+h1.wp-block-heading {
+    font-size: 100px !important;
+    line-height: 100px !important;
 }
 
 h1.wp-block-heading:not(:first-of-type) {
@@ -138,15 +143,6 @@ address.slogan {
 }
 
 
-p+p {
-    margin-top: -20px;
-}
-
-@media (min-width: 768px) {
-    p+p {
-        margin-top: -50px;
-    }
-}
 
 @media (min-width: 768px) {
 

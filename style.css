@@ -435,7 +435,7 @@ section#blog-inner-container {
     flex-direction: column;
     justify-content: flex-end;
     background-color: var(--color-background-gray);
-    padding: 100px;
+    padding: 80px;
     box-shadow: var(--box-shadow);
 }
 
@@ -571,7 +571,7 @@ h2.post-title, time.postcard-time {
 }
 
 
-.post-content, figure {
+.post-content, .post-content figure {
     width: 1200px;
     display: flex;
     flex-direction: column;

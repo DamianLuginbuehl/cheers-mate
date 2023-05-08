@@ -328,3 +328,60 @@ div.nl-form > p span.wpcf7-spinner {
     display: none;
 }
 
+
+
+/****** TEAM ******/
+
+/* Aligning the columns */
+.wp-block-column.is-layout-flow {
+    max-width: 370px;
+}
+
+.wp-block-columns {
+    justify-content: center;
+    gap: 60px;
+    padding: 80px;
+    margin-bottom: 77px;
+}
+
+
+/* Aligning the images in the Firgure an dgiving the figure a border */
+
+.wp-block-column.is-layout-flow > figure {
+    border: 2px solid var(--color-white);
+    width: 370px;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+
+/* Format the text in the columns */
+
+.wp-block-column.is-layout-flow * {
+    text-align: center;
+}
+.wp-block-column.is-layout-flow h3 {
+    color: var(--color-white) !important;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+.wp-block-column.is-layout-flow h3 {
+    color: var(--color-light-gray);
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0;
+}
+
+
+/* Format the text below the columns */
+
+.wp-block-columns ~ p:last-child {
+    margin-bottom: 180px;
+}
+
