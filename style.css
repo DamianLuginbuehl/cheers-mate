@@ -44,6 +44,10 @@ body {
     background-color: var(--color-background-black);
 }
 
+.invisible {
+    display: none !important;
+}
+
 header, footer {
     background-color: var(--color-background-gray);
 }
@@ -363,6 +367,17 @@ a.category-transparent:hover {
     color: var(--color-white) !important;
 }
 
+.current-cat a.category-transparent {
+    color: var(--color-black) !important;
+    background-color: var(--color-white) !important;
+}
+
+.current-cat a.category-transparent:hover {
+    opacity: 1;
+    background-color: var(--color-white);
+    color: var(--color-gray) !important;
+}
+
 
 
 .red-button {
@@ -508,7 +523,11 @@ h2.post-title, time.postcard-time {
 
 
 
+/****** SINGLE.PHP ******/
 
+.post-content-container {
+    
+}
 
 
 

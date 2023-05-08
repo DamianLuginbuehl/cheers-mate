@@ -1,4 +1,5 @@
-<?php get_header() ?>
+<?php get_header();
+ set_time_limit(60) ?>
 
 <main class="blog-page">
 
@@ -79,15 +80,17 @@
 
             <?php
 
+            $shownPostCount = 2;
+
             $postCount = $wp_query->found_posts;
             $postCount -= 1;
-            $postCount /= 6;
+            $postCount /= $shownPostCount;
             $pagesNeeded = ceil($postCount);
 
             if ($pagesNeeded <= 1) {
                 $generatePagination = FALSE;
             } else {
-                $generatePagination = true;
+                $generatePagination = TRUE;
             }
 
             // $pagesNeeded = 2;
@@ -132,9 +135,9 @@
                 if (have_posts()) {
                     while (have_posts()) {
                         the_post();
-                        if ($postOnPage == 6) {
+                        if ($postOnPage == $shownPostCount) {
                             $postPage += 1;
-                            $postOnPage = 1;
+                            $postOnPage = 0;
                         }
 
                 ?>
@@ -142,6 +145,7 @@
                         <article class="postcard page-<?= $postPage ?>" id="post-<?= get_the_ID(); ?>">
 
                             <time class="postcard-time" datetime="<?php the_time('d.m.Y, H:M') ?>"><?php the_time('d.m.Y, H:m') ?></time>
+
                             <h2 class="post-title"><?php the_title() ?></h2>
                             <ul class="post-categories">
                                 <?php $categories = get_the_category();
@@ -161,7 +165,8 @@
                             article#post-<?= get_the_ID();
 
                                             ?> {
-                                background-image: url(<?= get_the_post_thumbnail_url(get_the_ID(), 'medium') ?>);
+                                background: linear-gradient(270deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(<?= get_the_post_thumbnail_url(get_the_ID(), 'high') ?>);
+                                background-position: 50% 50%;
                                 background-repeat: no-repeat;
                                 background-size: cover;
                             }

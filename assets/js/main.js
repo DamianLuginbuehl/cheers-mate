@@ -1,6 +1,15 @@
 let loadPagination = function() {
     $(".postcard.page-1").addClass("visible");
     $(".pagination-button.page-1").addClass("active");
+
+    let searchParams = new URLSearchParams(window.location.search)
+
+    if(searchParams.has('show-all')) {
+        $(".pagination-button").addClass("invisible");
+        $(".postcard").addClass("visible");
+    }
+
+    // $(".postcard").addClass("visible");
 }
 
 let loadCategories = function() {
