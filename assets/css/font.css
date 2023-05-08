@@ -153,7 +153,7 @@ p+p {
     main>p,
     main>h3,
     main>blockquote {
-        width: 780px;
+        width: 780px !important;
         margin-left: auto;
         margin-right: auto;
     }
@@ -196,6 +196,8 @@ blockquote {
     padding-left: 16px;
     border-left: 2px solid var(--color-red) !important;
     margin-bottom: 30px;
+    width: 780px !important;
+
 }
 
 @media (min-width: 768px) {
@@ -226,7 +228,6 @@ blockquote cite {
     line-height: 19px;
     font-style: normal;
     font-weight: 500;
-    color: var(--color-white) !important;
 }
 
 @media (min-width: 768px) {
