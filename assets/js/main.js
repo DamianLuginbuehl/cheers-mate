@@ -1,4 +1,4 @@
-let loadPosts = function() {
+let loadPagination = function() {
     $(".postcard.page-1").addClass("visible");
     $(".pagination-button.page-1").addClass("active");
 }

@@ -246,6 +246,17 @@ main {
 
 /****** BLOG ******/
 
+main.blog-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section#latest-post {
+    width: 1200px !important;
+}
+
 section#latest-post, section#latest-post-image, section#latest-post-image-blur {
     height: calc(100vh - 150px) !important;
     display: flex;
@@ -275,7 +286,7 @@ section#latest-post div.post-container {
 }
 
 section#latest-post div.post-image {
-    width: 100%;
+    width: 70%;
     height: 100%;
     box-shadow: var(--big-box-shadow);
 }
@@ -329,6 +340,25 @@ a.category-white:hover {
     color: var(--color-gray) !important;
 }
 
+a.category-transparent {
+    color: var(--color-white) !important;
+    background-color: transparent !important;
+    text-decoration: none;
+    padding: 12px 30px;
+    border: solid 1px var(--color-white);
+    border-radius: 50px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+a.category-transparent:hover {
+    opacity: 0.7;
+    background-color: var(--color-white);
+    color: var(--color-white) !important;
+}
+
 
 
 .red-button {
@@ -354,16 +384,85 @@ a.category-white:hover {
     opacity: 1 !important;
 }
 
+section#blog {
+    display: flex;
+    justify-content: center;
+}
+section#blog-inner-container {
+    width: 1200px !important;
+}
+
+.post-container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 100px 50px;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". .";
+}
+
 .postcard {
     display: none;
+    height: 700px;
+    width: 100%;
+    border-bottom: 2px solid var(--color-red);
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 100px;
+}
+
+.postcard > .post-categories {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.postcard > .post-categories li {
+    margin-top: 15px;
+}
+
+h2.post-title, time.postcard-time {
+    margin-bottom: 10px;
+}
+
+.post-button {
+    position: absolute;
+    margin: 0 !important;
+    transform: translateY(calc(35px + 100px)) translateX(-100px);
+    width: calc((100vw - (100vw - 1200px) - 50px) / 2);
+    display: flex;
+    justify-content: center;
+}
+
+.post-button > a {
+    margin: 0 !important;
 }
 
 .postcard.visible {
-    display: block;
+    display: flex;
 }
 
-.active {
-    background-color: red;
+.pagination-button.active {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+.pagination-button {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+
+.pagination {
+    display: flex;
+    gap: 20px;
 }
 
 
