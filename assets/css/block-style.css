@@ -47,7 +47,7 @@ div.wp-block-cover>.wp-block-cover__inner-container {
 
 /* Limiting the height of the text container to the height of the text  */
 
-div.wp-block-cover>.wp-block-cover__inner-container>.wp-block-group {
+div.wp-block-cover>.wp-block-cover__inner-container>div.wp-block-group {
     height: max-content !important;
 }
 
@@ -87,7 +87,7 @@ main>div.wp-block-group:last-of-type {
 /* limiting the width of all covers and aplying a gap between the icons and the text */
 
 div.wp-block-cover:not(:first-of-type) div.wp-block-cover__inner-container {
-    width: 1200px !important;
+    width: 1200px;
     display: flex !important;
     gap: 220px
 }
@@ -169,7 +169,7 @@ div.wp-block-cover:first-of-type>div.wp-block-cover__inner-container>div.wp-bloc
 /* Adding a margin between the slogan end the buttons*/
 
 .slogan {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
 }
 
 .wp-block-buttons {
@@ -183,42 +183,43 @@ div.wp-block-cover:first-of-type>div.wp-block-cover__inner-container>div.wp-bloc
 
 /* Defining grid for cards */
 
-main > div.grid4-4 > div.wp-block-group__inner-container {
+main>div.grid4-4>div.wp-block-group__inner-container {
     display: grid !important;
-  grid-auto-rows: max-content;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 50px 50px;
-  grid-template-areas:
-    ". ."
-    ". .";
+    grid-auto-rows: max-content;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px 50px;
+    grid-template-areas:
+        ". ."
+        ". .";
 }
 
 
 /* Applying a margin to the grid */
 
-main > div.grid4-4 {
+main>div.grid4-4 {
     margin: 50px 0;
 }
 
 
 /* adding a paddings and margins to the cards in the grid */
 
-main > div.grid4-4 > div.wp-block-group__inner-container > div.wp-block-group {
+main>div.grid4-4>div.wp-block-group__inner-container>div.wp-block-group {
     padding: 50px;
 }
 
-main > div.grid4-4 > div.wp-block-group__inner-container > div.wp-block-group > div.wp-block-group__inner-container > h2 {
+main>div.grid4-4>div.wp-block-group__inner-container>div.wp-block-group>div.wp-block-group__inner-container>h2 {
     margin-bottom: 92px;
 }
-main > div.grid4-4 > div.wp-block-group__inner-container > div.wp-block-group > div.wp-block-group__inner-container > p {
+
+main>div.grid4-4>div.wp-block-group__inner-container>div.wp-block-group>div.wp-block-group__inner-container>p {
     margin-bottom: 80px;
 }
 
 
 /* defining position of H1 */
 
-main > h1 {
+main>h1 {
     margin-top: 220px;
     margin-bottom: 90px;
     padding-left: calc((100vw - 1200px) / 2);
@@ -240,7 +241,7 @@ main > h1 {
 
 /* Aligning the label */
 
-form > p > label.nl-label {
+form>p>label.nl-label {
     padding-left: 42px;
     font-size: 25px;
     line-height: 30px;
@@ -251,7 +252,7 @@ form > p > label.nl-label {
 
 /* Making the form contents a flexbox */
 
-div.nl-form > p {
+div.nl-form>p {
     display: flex !important;
     justify-content: space-between;
     gap: 30px;
@@ -260,7 +261,7 @@ div.nl-form > p {
 
 /* setting the style size of th e-mail field */
 
-div.nl-form > p span input#nl-email {
+div.nl-form>p span input#nl-email {
     width: calc(1200px - 60px - 350px);
     height: 90px;
     padding-left: 42px;
@@ -276,35 +277,36 @@ div.nl-form > p span input#nl-email {
     box-shadow: var(--box-shadow);
 }
 
-div.nl-form > p span input#nl-email:focus {
+div.nl-form>p span input#nl-email:focus {
     border-color: var(--color-gray);
 }
 
-div.nl-form > p span input#nl-email::placeholder {
+div.nl-form>p span input#nl-email::placeholder {
     color: var(--color-gray);
 }
 
 
 /* Input Validation style */
 
-div.nl-form > p span input#nl-email.wpcf7-not-valid {
+div.nl-form>p span input#nl-email.wpcf7-not-valid {
     color: var(--color-red);
     border-color: var(--color-red);
 }
 
-div.nl-form > p span input#nl-email.wpcf7-not-valid::placeholder {
+div.nl-form>p span input#nl-email.wpcf7-not-valid::placeholder {
     color: var(--color-red);
 }
 
-div.nl-form > p span .wpcf7-not-valid-tip, .wpcf7-response-output {
-    display: none;
+div.nl-form>p span .wpcf7-not-valid-tip,
+div.nl-form ~ .wpcf7-response-output, .wpcf7-not-valid-tip {
+    display: none !important;
 }
 
 
 
 /* Setting the style and size of the submit button */
 
-div.nl-form > p input#nl-submit {
+div.nl-form>p input#nl-submit {
     width: 350px !important;
     height: 90px;
     background-color: transparent;
@@ -320,11 +322,11 @@ div.nl-form > p input#nl-submit {
     cursor: pointer;
 }
 
-div.nl-form > p input#nl-submit:hover {
+div.nl-form>p input#nl-submit:hover {
     text-shadow: var(--text-shadow);
 }
 
-div.nl-form > p span.wpcf7-spinner {
+span.wpcf7-spinner {
     display: none;
 }
 
@@ -347,7 +349,7 @@ div.nl-form > p span.wpcf7-spinner {
 
 /* Aligning the images in the Firgure an dgiving the figure a border */
 
-.wp-block-column.is-layout-flow > figure {
+.wp-block-column.is-layout-flow>figure {
     border: 2px solid var(--color-white);
     width: 370px;
     height: 370px;
@@ -364,6 +366,7 @@ div.nl-form > p span.wpcf7-spinner {
 .wp-block-column.is-layout-flow * {
     text-align: center;
 }
+
 .wp-block-column.is-layout-flow h3 {
     color: var(--color-white) !important;
     font-size: 25px;
@@ -371,6 +374,7 @@ div.nl-form > p span.wpcf7-spinner {
     font-weight: 700;
     margin: 0;
 }
+
 .wp-block-column.is-layout-flow h3 {
     color: var(--color-light-gray);
     font-size: 25px;
@@ -381,7 +385,191 @@ div.nl-form > p span.wpcf7-spinner {
 
 /* Format the text below the columns */
 
-.wp-block-columns ~ p:last-child {
+.wp-block-columns~p:last-child {
     margin-bottom: 180px;
 }
+
+
+
+
+/****** DATENSCHUTZ ******/
+
+/* Making the Section a flexbox */
+section.wp-block-group {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Making the Sections inner container a flexbox and resticting its width */
+
+section.wp-block-group>div.wp-block-group__inner-container {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Formatting all the text */
+
+section.wp-block-group>div.wp-block-group__inner-container p {
+    width: 780px;
+    margin-bottom: 80px;
+}
+
+section.wp-block-group>div.wp-block-group__inner-container p:last-of-type {
+    margin-bottom: 180px;
+}
+
+section.wp-block-group>div.wp-block-group__inner-container h3 {
+    width: 780px;
+    margin-bottom: 50px;
+    color: var(--color-white) !important;
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 700;
+}
+
+section.wp-block-group>div.wp-block-group__inner-container h2 {
+    width: 100%;
+    margin: 60px 0 80px 0;
+}
+
+section.wp-block-group>div.wp-block-group__inner-container h1 {
+    width: 100%;
+    margin: 180px 0 100px 0;
+}
+
+
+
+
+/****** KONTAKT ******/
+
+div.contact-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.contact-form-inner-container {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.contact-form-first-line {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+div.contact-form p, div.contact-form label, div.contact-form input, div.contact-form textarea {
+    width: 100%;
+    border-radius: 43px;
+}
+
+div.contact-form label {
+    margin: 12px 0 12px 42px;
+    width: calc(100% - 42px);
+    display: block;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+div.contact-form input, div.contact-form textarea {
+    width: calc(100% + 42px);
+    padding: 26px 42px;
+    margin-top: 20px;
+    resize: vertical;
+    transition: height 0s;
+    min-height: 72px;
+    border: none;
+    outline: none;
+    background-color: var(--color-background-gray);
+    margin-left: -42px;
+
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    color: var(--color-white);
+}
+
+div.contact-form ::placeholder {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--color-gray);
+}
+
+
+div.contact-form p {
+    margin: 0;
+}
+
+
+div.contact-form p:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+div.contact-form input.button-red {
+    width: max-content;
+    white-space: nowrap;
+    color: var(--color-white) !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+    background-color: var(--color-red);
+    padding: 20px 65px;
+    margin: 12px 0;
+}
+
+.valid {
+    border-color: var(--color-green);
+}
+
+.wpcf7-not-valid {
+    border-color: var(--color-red) !important;
+}
+
+div.contact-form ~ .wpcf7-response-output {
+    width: 1200px !important;
+    height: 92px !important;
+    padding: 29px 42px !important;
+    border-radius: 666px;
+    margin-left: calc((100vw - 1200px) / 2 ) !important;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    border-width: 2px;
+    color: transparent !important;
+    border-color: transparent !important;
+    transition: all 0.2s !important;
+}
+
+div.contact-form ~ .wpcf7-response-output.red {
+    border-color: var(--color-red) !important;
+    color: var(--color-red) !important;
+}
+
+div.contact-form ~ .wpcf7-response-output.green {
+    border-color: var(--color-green) !important;
+    color: var(--color-green) !important;
+}
+
+div.contact-form ~ *:last-child {
+    margin-bottom: 180px;
+}
+
+
 

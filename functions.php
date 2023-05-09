@@ -103,6 +103,9 @@ function cm_theme_include_googlefonts()
 
     //apply font formatting
     wp_enqueue_style('cm_theme-fontstyle', get_template_directory_uri() . '/assets/css/font.css');
+
+
+    wp_enqueue_style('cm_mobile', get_template_directory_uri() . '/assets/css/mobile.css');
 }
 
 add_action('wp_enqueue_scripts', 'cm_theme_include_googlefonts');

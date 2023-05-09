@@ -8,6 +8,8 @@ h1 {
     font-weight: 700;
 }
 
+@media screen and (min-width: 1155px){
+
 h1.wp-block-heading {
     font-size: 100px !important;
     line-height: 100px !important;
@@ -16,7 +18,7 @@ h1.wp-block-heading {
 h1.wp-block-heading:not(:first-of-type) {
     margin: 60px 0 30px 0;
 }
-
+}
 @media (min-width: 768px) {
     h1 {
         font-size: 100px !important;

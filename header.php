@@ -13,6 +13,12 @@
     <header>
         <div class="web-title">
             <a href="<?= home_url() ?>"><?php bloginfo('name') ?></a>
+
+            <button onclick="toggleMenu()" class="burger-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         <nav>
 

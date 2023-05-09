@@ -19,7 +19,7 @@
 
                         <div class="post-info">
                             <div class="post-meta">
-                                <time datetime="<?php the_time('d.m.Y, H:M') ?>"><?php the_time('d.m.Y, H:m') ?></time>
+                                <time datetime="<?php the_time('d.m.Y, H:i') ?>"><?php the_time('d.m.Y, H:i') ?></time>
                                 <ul class="categories">
                                     <?php $categories = get_the_category();
                                     foreach ($categories as $category) {
@@ -144,7 +144,7 @@
 
                         <article class="postcard page-<?= $postPage ?>" id="post-<?= get_the_ID(); ?>">
 
-                            <time class="postcard-time" datetime="<?php the_time('d.m.Y, H:M') ?>"><?php the_time('d.m.Y, H:m') ?></time>
+                            <time class="postcard-time" datetime="<?php the_time('d.m.Y, H:i') ?>"><?php the_time('d.m.Y, H:i') ?></time>
 
                             <h2 class="post-title"><?php the_title() ?></h2>
                             <ul class="post-categories">

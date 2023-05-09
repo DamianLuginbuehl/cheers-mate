@@ -1,0 +1,189 @@
+/* ********************************* *
+   Component: .burger-toggle
+ * ********************************* */
+.burger-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding-top: 5px;
+    user-select: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.burger-toggle span {
+    display: block;
+    position: relative;
+    left: 6px;
+    width: 32px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.burger-toggle span:nth-child(1) {
+    margin-top: 4px;
+    transform-origin: 30px 6px;
+}
+
+.burger-toggle span:nth-child(3) {
+    transform-origin: 23px 1px;
+}
+
+.burger-toggle.burger-toggle--open span:nth-child(1) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+.burger-toggle.burger-toggle--open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-toggle.burger-toggle--open span:nth-child(3) {
+    transform: rotate(45deg) translate(-2px, -1px);
+}
+
+
+
+
+@media screen and (max-width: 1250px) {
+
+    /* Newsletter form */
+    div.nl-form>p {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    div.nl-form>p span input#nl-email {
+        width: 100%;
+    }
+
+    main>div.wp-block-group>div.wp-block-group__inner-container {
+        width: 90vw !important;
+    }
+
+    div.nl-form>p input#nl-submit {
+        align-self: flex-end;
+    }
+
+    div.nl-form>p br {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1155px) {
+
+    /* Download Button and Menu */
+    .burger-toggle {
+        display: block;
+    }
+
+    header {
+        flex-direction: column;
+        padding-top: 30px;
+        max-height: 70px;
+        min-height: 100px;
+        transition: max-height 0.5s ease-in;
+    }
+
+    header * {
+        transition: all 0.5s ease-in !important;
+    }
+
+    header .button {
+        display: none;
+    }
+
+    header nav {
+        opacity: 0;
+        pointer-events: none;
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav a {
+        align-items: flex-start !important;
+    }
+
+    header.nav--open {
+        max-height: 100vh;
+    }
+
+    header.nav--open nav {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    header .web-title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .web-title a:after {
+        display: none;
+    }
+
+    h1, body h1.block-heading {
+        font-size: 40px !important;
+        line-height: 49px !important;
+        font-weight: 700;
+    }
+
+
+
+
+
+    /****** HOME ******/
+
+    /* Setting height and flexbox of conent of all containers */
+
+    div.wp-block-cover>.wp-block-cover__inner-container {
+        width: 90vw !important;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    /* Setting the height for all images/icons */
+
+    div.wp-block-cover__inner-container figure img {
+        max-width: 200px !important;
+        max-height: 200px !important;
+    }
+
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    footer {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    /****** HOME ******/
+
+    /* Stting the buttons to vertical layout */
+    div.wp-block-cover:first-of-type>div.wp-block-cover__inner-container>div.wp-block-buttons {
+        flex-direction: column;
+    }
+
+    div.wp-block-cover:first-of-type>div.wp-block-cover__inner-container>div.wp-block-buttons>div.wp-block-button:first-child a {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    div.wp-block-cover:not(:first-of-type) div.wp-block-cover__inner-container {
+        gap: 60px;
+    }
+}
