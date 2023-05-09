@@ -151,7 +151,51 @@
 
 
     /****** INDEX.PHP ******/
-    
+
+    section#latest-post-image-blur {
+        display: none;
+    }
+
+    section#latest-post-image {
+        top: 100px;
+    }
+
+    section#latest-post .post-image {
+        box-shadow: none !important;
+        background: transparent;
+    }
+
+    section#latest-post div.post-info {
+        margin: 0;
+    }
+
+    section#latest-post div.post-text-desktop {
+        display: none!important;
+    }
+
+    section#latest-post div.post-text-mobile {
+        display: flex !important;
+    }
+
+    section#latest-post div.post-text {
+        width: 50%;
+    }
+
+
+
+
+
+    /****** BLOG ******/
+    .post-container {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 100px;
+        grid-template-areas:
+            ".";
+        margin-bottom: 100px;
+    }
 }
 
 

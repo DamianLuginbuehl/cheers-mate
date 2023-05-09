@@ -30,17 +30,21 @@
                             <h1 class="post-title">
                                 <?php the_title() ?>
                             </h1>
+                            <div class="post-text post-text-mobile">
+                                <p>
+                                    <?= get_the_excerpt() ?>
+                                </p>
+
+                                <a href="<?php the_permalink() ?>" class="red-button">Ansehen</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="post-text">
+                    <div class="post-text post-text-desktop">
                         <p>
                             <?= get_the_excerpt() ?>
                         </p>
 
                         <a href="<?php the_permalink() ?>" class="red-button">Ansehen</a>
-
-
-
                     </div>
                 </div>
 
@@ -106,9 +110,9 @@
             </h1>
             <div class="controls">
                 <div class="category-list">
-                        <ul class="post-categories category-list-all">
-                            <?php wp_list_categories('title_li='); ?>
-                        </ul>
+                    <ul class="post-categories category-list-all">
+                        <?php wp_list_categories('title_li='); ?>
+                    </ul>
 
                 </div>
                 <div class="pagination">

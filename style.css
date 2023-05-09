@@ -266,7 +266,9 @@ main.blog-page {
     width: 100%;
 }
 
-
+section#latest-post div.post-text-mobile {
+    display: none !important;
+}
 
 section#latest-post, section#latest-post-image, section#latest-post-image-blur {
     height: calc(100vh - 150px) !important;
