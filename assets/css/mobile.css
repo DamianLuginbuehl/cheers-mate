@@ -208,7 +208,8 @@
 
 
 
-    a.category-white, a.category-transparent {
+    a.category-white,
+    a.category-transparent {
         padding: 8px 17px;
         font-size: 12px;
         line-height: 15px;
@@ -228,8 +229,13 @@
     section#blog-inner-container {
         width: 90vw !important;
     }
-    section#blog-inner-container > h1 {
+
+    section#blog-inner-container>h1 {
         width: fit-content;
+    }
+
+    #blog-inner-container>.controls {
+        margin: 50px 0;
     }
 
     .pagination-button {
@@ -246,10 +252,10 @@
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        gap: 100px;
+        gap: 50px;
         grid-template-areas:
             ".";
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .postcard {
@@ -259,6 +265,7 @@
 
     .post-categories {
         gap: 10px;
+        margin-bottom: 10px;
     }
 
     .post-button {
@@ -269,6 +276,69 @@
         width: 100vw;
         display: flex;
         justify-content: center;
+    }
+
+    .pagination-end {
+        margin-bottom: 30px;
+    }
+
+    /****** SINGLE.PHP ******/
+
+    .post-content,
+    #post-info {
+        width: 90vw;
+    }
+
+    .post-button-back {
+        transform: translateY(calc(25.5px)) translateX(calc(100vw - (100vw - 90vw) - 160.83px));
+    }
+
+    .post-button-back>a {
+        font-size: 15px !important;
+        line-height: 19px !important;
+        padding: 14px 45px !important;
+    }
+
+    .post-content p,
+    blockquote,
+    .post-content figcaption,
+    .post-content h3 {
+        width: 90vw !important;
+    }
+
+    .post-content h2 {
+        font-size: 28px;
+        line-height: 35px;
+        margin: 30px 0 16px 0;
+    }
+
+    .post-content h3 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px
+    }
+
+    .post-content p {
+        font-size: 15px;
+        line-height: 19px;
+        margin-bottom: 30px;
+    }
+
+    .post-content blockquote p {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+
+    .post-content figcaption {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+
+
+    .post-content figure {
+        width: 100vw;
     }
 
 
@@ -288,6 +358,45 @@
         padding: 25px;
         width: 200px;
         height: 200px;
+    }
+
+
+    /****** DATENSCHUTZ ******/
+
+    /* Restricting the sections width */
+
+    section.wp-block-group>div.wp-block-group__inner-container {
+        width: 90vw;
+    }
+
+
+    /* Formatting all the text */
+
+    section.wp-block-group>div.wp-block-group__inner-container p {
+        width: 90vw;
+        margin-bottom: 30px;
+    }
+
+    section.wp-block-group>div.wp-block-group__inner-container p:last-of-type {
+        margin-bottom: 60px;
+    }
+
+    section.wp-block-group>div.wp-block-group__inner-container h3 {
+        width: 90vw;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    section.wp-block-group>div.wp-block-group__inner-container h2 {
+        width: 100%;
+        margin: 30px 0 16px 0;
+    }
+
+    section.wp-block-group>div.wp-block-group__inner-container h1 {
+        width: 100%;
+        margin: 60px 0 30px 0;
     }
 }
 
@@ -413,7 +522,8 @@
     /* styling the first button in the first cover incl. hover */
 
     div.wp-block-cover:first-of-type>div.wp-block-cover__inner-container>div.wp-block-buttons>div.wp-block-button:first-child a,
-    a.red-button {
+    a.red-button,
+    div.contact-form {
         width: max-content;
         white-space: nowrap;
         color: var(--color-white) !important;
@@ -456,6 +566,22 @@
     footer {
         flex-direction: column;
         gap: 60px;
+        padding: 30px;
+    }
+
+    footer *:not(i, h4) {
+        font-size: 12px !important;
+        line-height: 15px !important;
+        font-weight: 500 !important;
+    }
+
+    footer i {
+        font-size: 30px !important;
+    }
+
+    footer .social-media nav ul li a {
+        width: 72px;
+        height: 72px;
     }
 
     /****** HOME ******/
@@ -490,8 +616,9 @@
 
     .wp-block-columns {
         justify-content: center;
-        gap: 60px;
-        padding: 80px 0;
+        gap: 0px;
+        padding-top: 50px;
+        padding-bottom: 0px;
         margin-bottom: 77px;
     }
 
@@ -503,6 +630,85 @@
         padding: 25px;
         width: 100%;
         height: auto;
+        margin-bottom: 10px;
+    }
+
+    .wp-block-column.is-layout-flow h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+
+    .wp-block-columns~p:last-child {
+        margin-bottom: 60px;
+    }
+
+
+
+    /****** KONTAKT ******/
+
+    div.contact-form-inner-container {
+        width: 90vw;
+    }
+
+    div.contact-form-first-line {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    div.contact-form label {
+        font-size: 15px;
+        line-height: 19px;
+        margin-left: 23px;
+    }
+
+    div.contact-form p:last-of-type {
+        justify-content: flex-start;
+    }
+
+    div.contact-form-inner-container>p:last-of-type {
+        justify-content: flex-end;
+    }
+
+
+    div.contact-form input,
+    div.contact-form textarea {
+        border-radius: 21px;
+        font-size: 15px;
+        line-height: 19px;
+        padding: 11px 22px;
+        margin-left: -23px;
+    }
+
+    div.contact-form ::placeholder {
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    div.contact-form input {
+        min-height: 0;
+        height: 45px;
+    }
+
+    div.contact-form textarea {
+        min-height: 45px;
+    }
+
+    div.contact-form p:last-of-type {
+        width: 100%;
+    }
+
+    div.contact-form {
+        line-height: 15px !important;
+    }
+
+    div.contact-form~.wpcf7-response-output {
+        font-size: 15px;
+        line-height: 19px;
+        padding: 13px 25px !important;
+        width: 90vw !important;
+        height: 50px !important;
+        margin-left: calc((100vw - 90vw) / 2) !important;
     }
 
 }

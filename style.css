@@ -250,22 +250,6 @@ footer .address a.contact:hover {
 
 
 
-footer *:not(i, h4) {
-    font-size: 12px !important;
-    line-height: 15px !important;
-    font-weight: 500 !important;
-}
-
-footer i {
-    font-size: 30px !important;
-}
-
-footer .social-media nav ul li a {
-    width: 72px;
-    height: 72px;
-}
-
-
 /****** MAIN ******/
 
 body {

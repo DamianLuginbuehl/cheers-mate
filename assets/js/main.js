@@ -13,6 +13,10 @@ $(document).ready(function () {
     if(urlSearchParams.has('devMode')) {
         $("body").prepend('<button onClick="location.reload(true)" class="dev-panel">reload</button>');
     }
+
+
+    $("ul#menu-social-media-navigation li a").attr('target', '_blank');
+    $("ul#menu-social-media-navigation li a").attr('rel', 'noopener noreferrer');
 });
 
 let loadPagination = function () {
