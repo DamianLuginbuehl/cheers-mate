@@ -54,7 +54,7 @@
 
                 <style>
                     section#latest-post-image {
-                        background: linear-gradient(to bottom, rgba(23, 23, 23, 0.2) 0%, rgba(23, 23, 23, 0.999) 50%, var(--color-background-black) 100%), url(<?= get_the_post_thumbnail_url(get_the_ID(), 'high') ?>);
+                        background: linear-gradient(to bottom, transparent, rgba(23, 23, 23, 0.4) 200px, #171717 360px), url(<?= get_the_post_thumbnail_url(get_the_ID(), 'high') ?>);
                         background-repeat: no-repeat;
                         background-size: cover;
                     }
